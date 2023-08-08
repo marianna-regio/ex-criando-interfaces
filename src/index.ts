@@ -104,11 +104,11 @@ function getAllRepositories() {
   console.log(`Total de repositórios ${repos}`);
 }
 
-//mostrar os cinco usuarios com mais repositorios
+//mostrar os tres usuarios com mais repositorios
 async function getUsersMostRepos() {
   // Ordena o array de usuários com base no número de repositórios em ordem decrescente
   const sortedUsers = users.sort((a, b) => b.public_repos - a.public_repos);
-  // Retorna os cinco primeiros usuários do array ordenado
+  // Retorna os tres primeiros usuários do array ordenado
   const top5 = sortedUsers.slice(0, 3).forEach((user,index) =>
     console.log(`${index+1}°: ${user.name}
         Repositórios: ${user.public_repos}`)
